@@ -66,11 +66,11 @@ class StockPicking(models.Model):
         return super(StockPicking,self).action_cancel()
 
     def print_button(self):
+        self.button_times += 1
         return
 
     def get_data(self):
         print(self.print_data)
-        self.button_times += 1
         return {
             'data' : {
                 'text' : self.print_data

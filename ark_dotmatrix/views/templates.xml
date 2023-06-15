@@ -86,7 +86,7 @@
             <t t-out="'----------'.ljust(12,'?')"/>
             <t t-out="'----------'.ljust(12,'?')"/>
             <t t-out="'----------'.ljust(12,'?')"/>
-Prn(<t t-out="object.button_times"/>) <t t-out="object.env.user.name"/>/<t t-out="object.env.user.employee_id.department_id.name or ''"/> <t t-out="object.scheduled_date"/>
+Prn(2) <t t-out="object.env.user.name"/>/<t t-out="object.env.user.employee_id.department_id.name or ''"/> <t t-out="object.scheduled_date"/>
           <br/>
           <t t-out="'Retur Maksimal 14 hari dari tanggal surat jalan dan segel belum dibuka'.rjust(80,'?')"/>
         </p>
