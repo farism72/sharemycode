@@ -18,7 +18,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','sale','ark_sale','stock','partner_fax','ark_account'],
+    'depends': ['base','sale','stock'],
 
     # always loaded
     'data': [
