@@ -16,14 +16,14 @@
                 <t t-out="' '.ljust(41,'?')"/><t t-out="object.partner_id.city"/>
               <br/>
               <br/>
-                <t t-out="'Qty '.rjust(12,'?')"/><t t-out="'Item Barang'.ljust(25,'?')"/><t t-out="'Merek'.ljust(6,'?')"/><t t-out="'Harga (Rp.)'.rjust(17,'?')"/><t t-out="'Jumlah'.rjust(17,'?')"/>
+                <t t-out="'Qty '.rjust(12,'?')"/><t t-out="'Item Barang'.ljust(25,'?')"/><t t-out="'Harga (Rp.)'.rjust(17,'?')"/><t t-out="'Jumlah'.rjust(17,'?')"/>
               <br/>
                <t t-out="' '.ljust(80,'-')"/>
               <br/>
               <t t-foreach="object.order_line" t-as="o">
                 <tr>
                   <t>
-                    <t t-out="str(o.product_uom_qty or '').rjust(6,'?')"/><t t-out="(o.product_uom.name or '').ljust(6,'?')"/><t t-out="(o.product_id.name or '').ljust(25,'?')"/><t t-out="(o.brand_id.name or '').ljust(6,'?')"/><t t-out="(str('{:4,.0f}'.format(o.price_unit))or '').rjust(17,'?')"/><t t-out="(str('{:4,.0f}'.format(o.price_subtotal))or '').rjust(17,'?')"/>
+                    <t t-out="str(o.product_uom_qty or '').rjust(6,'?')"/><t t-out="(o.product_uom.name or '').ljust(6,'?')"/><t t-out="(o.product_id.name or '').ljust(25,'?')"/><t t-out="(str('{:4,.0f}'.format(o.price_unit))or '').rjust(17,'?')"/><t t-out="(str('{:4,.0f}'.format(o.price_subtotal))or '').rjust(17,'?')"/>
                   </t>
                 </tr>
               </t>
@@ -102,7 +102,7 @@ Prn(<t t-out="object.button_times"/>) <t t-out="object.env.user.name"/>/<t t-out
             <p style="margin: 0px; padding: 0px; font-size: 13px;">
                 <t t-out="object.company_id.name or ''">PT.xyz</t>
               <br/>
-                <t t-out="object.company_id.street"/><t t-out="object.company_id.street2"/> T:<t t-out="object.company_id.phone"/>F:<t t-out="object.company_id.partner_id.fax"/> email:<t t-out="object.company_id.email"/>
+                <t t-out="object.company_id.street"/><t t-out="object.company_id.street2"/> T:<t t-out="object.company_id.phone"/> email:<t t-out="object.company_id.email"/>
               <br/>
               <br/>
                 KWITANSI : <t t-out="object.name"/>
@@ -112,7 +112,7 @@ Prn(<t t-out="object.button_times"/>) <t t-out="object.env.user.name"/>/<t t-out
                 Untuk Pembayaran <t t-out="object.ref"/>
               <br/>
               <br/>
-                Terbilang # <t t-out="object.bilangan"/>#
+                Terbilang # #
               <br/>
                 JUMLAH Rp. <t t-out="'{:4,.0f}'.format(object.amount)"/>
               <br/>
